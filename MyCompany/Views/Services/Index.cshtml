@@ -1,0 +1,22 @@
+﻿@model IQueryable<ServiceItem>
+@{
+    ViewBag.Title ="Главная";
+}
+<div>
+    @if (Model.Any())
+    {
+        <ul class="big-image-list">
+            @foreach (ServiceItem entity in Model)
+            {
+                <li>
+                    <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
+                        <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
+                    </a>
+                    <h3>@entity.Title</h3>
+                    <h4>@entity.CollectionName</h4>
+                    <p>@entity.Subtitle</p>
+                </li>
+            }
+        </ul>
+    }
+</div>

@@ -1,0 +1,22 @@
+﻿<div id="header-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="language">
+                    <img src="~/images/eng.png" alt="en" data-google-lang="en" class="language__img" translate="no">
+                    <img src="~/images/rus.png" alt="ru" data-google-lang="ru" class="language__img" translate="no">
+                </div>
+                <header id="header">
+                    <h1><a href="/" id="logo">@Config.CompanyName</a></h1>
+                    <nav id="nav">
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">Главная</a>
+                        <a asp-area="User" asp-controller="Home" asp-action="Index" asp-route-id="">Мои коллекции</a>
+                        <a asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
+                        <a asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a>
+                    </nav>
+                </header>
+
+            </div>
+        </div>
+    </div>
+</div>
